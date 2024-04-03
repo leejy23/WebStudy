@@ -24,6 +24,12 @@ div#ootd {
 p {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
+div#login_form{
+    width: 500px;
+    text-align: center;
+    height: auto;
+}
 div#login_form input {
     display: inline-block;
+    margin: 5px;
 }
