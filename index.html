@@ -79,27 +79,127 @@
                 패스워드 입력 : <input type="password" name="" id="">
             </label>
             
-            전화번호 : <input type="tal" name="" id="">
-            숫자 : <input type="number" name="" id="">
+            전화번호 : <input type="tal" name="" id="" disabled>
+            숫자 : <input type="number" name="" id="" value="7" readonly>
             웹주소 : <input type="url" name="" id="">
             검색어 : <input type="search" name="" id="">
             이메일 주소 : <input type="email" name="" id="">
             체크박스 : <input type="checkbox" name="" id="">
             라디오버튼 : <input type="radio" name="" id="">
             파일 첨부 : <input type="file" name="" id="">
-            <input type="button" value="나는 버튼입니다.">
+            <input type="button" value="나는 버튼입니다." onmouseout="alert('버튼 나감')" onclick="alert('버튼이 눌러졌습니다!')">
             <input type="image" src="https://static.xx.fbcdn.net/rsrc.php/v3/yG/r/pENh3y_2Pnw.png" alt="" width="20px">
             월 : <input type="month" name="" id="">
             주 : <input type="week" name="" id="">
             시 : <input type="time" name="" id="">
             범위 : <input type="range" name="" id="">
             색상 선택 : <input type="color" name="" id="">
-            <textarea name="" id="" cols="30" rows="10">
-                하고싶은 말을 쓰세용
+            <textarea name="" id="" cols="30" rows="10">하고싶은 말을 쓰세용
             </textarea>
+            <fieldset>
+                <legend>기본 정보</legend> 
+                <p>
+                  <label for="userid">아이디</label>
+                  <input type="text" id="userid">
+                </p>
+                <p>
+                  <label for="passwd">비밀번호</label>
+                  <input type="password" id="passwd">
+                </p>
+              </fieldset>
+              <fieldset>
+                <legend>선택 정보</legend>
+                <p>
+                  <label for="age">나이</label>
+                  <input type="number" id="age">
+                </p>
+                <p>
+                  <label for="recommender">추천인</label>
+                  <input type="text" id="recommender">
+                </p>
+              </fieldset>
+              <select name="city" id="city">
+                <optgroup label="서울시">
+                  <option value="강북구">강북구</option>
+                  <option value="강남구">강남구</option>
+                  <option value="서초구">서초구</option>
+                </optgroup>
+                <optgroup label="경기도 성남시">
+                  <option value="중원구">중원구</option>
+                  <option value="분당구">분당구</option>
+                </optgroup>
+              </select>
             <input type="submit" value="로그인하기">
             <input type="reset" value="양식 초기화">
-
+            <button type="submit">
+                <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yG/r/pENh3y_2Pnw.png" alt="페이스북 버튼">
+                페이스북에 등록하기
+              </button>
+              <br>
+            </div>
+            <table style="border: 1px solid gray ; text-align: center;">
+                <tr>
+                    <th>번호</th><th>상품명</th><th>수량</th><th>가격</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>콜라</td>
+                    <td>1개</td>
+                    <td>1,500원</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>사이다</td>
+                    <td>2개</td>
+                    <td rowspan="2">1,000원</td> <!-- 행 병합 -->
+                  </tr>
+                <tr>
+                    <td>3</td>
+                    <td>탄산수</td>
+                    <td>3개</td> 
+                    <!-- 4행 4열은 3행 4열과 병합했으므로 생성하지 않습니다. -->
+                  </tr>
+                  <tr>
+                    <td>총 금액</td>
+                    <td colspan="3">6,500원</td> <!-- 열 병합 --> 
+                    <!-- 5행 2열부터 열 3개를 병합했으므로 나머지 열은 생성하지 않습니다. -->
+                  </tr>
+              </table>
+              <div style="width: 600px; text-align:center">
+                <table width="500px" border="2" cellspacing="3">
+                    <caption style="color: #d62929; font-weight: bold;">제품 주문표</caption>
+                    <col style="width: 10%;">
+                    <colgroup span="3" style="width: 20%; background-color: beige;"></colgroup>
+                    <col style="width: 30%;">
+                    <tr>
+                     <th>번호</th><th>상품명</th><th>수량</th><th>가격</th><th>비고</th>
+                 </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>콜라</td>
+                        <td>1개</td>
+                        <td>1,500원</td>
+                        <td rowspan="3">item</td>
+                    </tr>
+                    <tr>
+                     <td>2</td>
+                        <td>사이다</td>
+                        <td>2개</td>
+                        <td rowspan="2">1,000원</td>
+                 </tr>
+                    <tr>
+                     <td>3</td>
+                     <td>탄산수</td>
+                        <td>3개</td> 
+                 </tr>
+                    <tr>
+                     <td>총 금액</td>
+                        <td colspan="4">6,500원</td>
+                    </tr>
+                </table>
+            </div>
+            <br>
+            <video src="/img/A$AP Rocky - Praise The Lord (Da Shine) (Official Video) ft. Skepta.mp4"  style="width: 500px;" controls></video>
         </form>
     </div>
 </body>
